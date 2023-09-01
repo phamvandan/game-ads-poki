@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+poki.com	TRUE	/	FALSE	1999999999	poki_experiments	%7B%22activeTests%22%3A%5B%5D%7D
+poki.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+
