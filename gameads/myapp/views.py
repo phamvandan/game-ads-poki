@@ -7,7 +7,7 @@ from django.template import loader
 import random
 # Create your views here.
 def index(request):
-    # template = loader.get_template('index.html')   
+    template = loader.get_template('index.html')   
     # list_game = get_listgame()
 
     # all_game = [subset for subset in list_game]
@@ -19,4 +19,4 @@ def index(request):
 
     # }
     # return HttpResponse(template.render(context))  
-    return HttpResponse('test')
+    return HttpResponse(template.render())
