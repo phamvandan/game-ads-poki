@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('listgame', views.listgame, name='listgame'),
     # path('games/<str:subpath>', games_views.index, name='games_index'),
     # path('search', search_views.index, name='search_index')
 

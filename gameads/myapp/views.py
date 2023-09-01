@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from django.template import loader
-# from .services import *
+from .services import *
 import random
 # Create your views here.
 def index(request):
@@ -20,3 +20,7 @@ def index(request):
     # }
     # return HttpResponse(template.render(context))  
     return HttpResponse(template.render())
+
+def listgame(request):
+    print(get_listgame())
+    return HttpResponse(get_listgame())
