@@ -9,9 +9,14 @@ from django.db import models
 
 
 class Game(models.Model):
+    id = models.TextField(primary_key=True)
     name = models.TextField()
-    url = models.TextField()
+    html_name = models.TextField()
+    source = models.TextField()
+    description = models.TextField()
+    title = models.TextField()
+    picture = models.TextField()
 
     class Meta:
         managed = False
-        db_table = 'game'
+        db_table = 'games'
