@@ -3944,52 +3944,61 @@
     };
   </script>
   <script>
-    $(document).ready(function () { 
+    var searchTimer;
+    $(document).ready(function () {
       var searchInput = document.getElementById('searchInput');
       var searchResults = document.getElementById('searchResults');
       var NoResult = document.getElementById('NoResult');
-
       searchInput.addEventListener('input', function () {
-        var searchTerm = searchInput.value;
-        if(searchTerm == '') {
-          NoResult.style.display = "none";
-        }
-        // Gửi yêu cầu AJAX khi giá trị thay đổi
-        $.ajax({
-          url: 'search', // Thay đổi đường dẫn tới view search_game của bạn
-          data: { search_term: searchTerm },
-          dataType: 'json',
-          success: function (data) {
-            var resultsList = $('#searchResults');
-            resultsList.empty();
-            if (data.search_game.length > 0) {
-              NoResult.style.display = "none";
 
-              $.each(data.search_game, function (index, game) {
-                var gameLink = document.createElement('a');
-                gameLink.href = 'games/' + game.html_name;
-                gameLink.className = 'sc-wr3rvk-0 jRxCRx sc-963fcq-2 cOWZsC sc-1tnpzxm-5 iUisDg';
-                
-                var gameImage = document.createElement('img');
-                gameImage.src = game.picture;
-                gameImage.srcset = game.picture;
-                gameImage.alt = game.name;
-                gameImage.width = 94;
-                gameImage.height = 94;
-                gameImage.className = 'sc-18mcksl-1 eoBBYj';
-                
-                var gameTitle = document.createElement('span');
-                gameTitle.className = 'sc-963fcq-0 esaxGV global-cq-title';
-                gameTitle.textContent = game.name;
-                gameLink.appendChild(gameImage);
-                gameLink.appendChild(gameTitle);
-                resultsList.append(gameLink);
-              });
-            } else {
-              NoResult.style.display = "block";
-            }
+        clearTimeout(searchTimer);
+
+
+        // Gửi yêu cầu AJAX khi giá trị thay đổi
+        searchTimer = setTimeout(function () {
+          var searchTerm = searchInput.value;
+          var resultsList = $('#searchResults');
+          resultsList.empty();
+          if (searchTerm == '') {
+            NoResult.style.display = "none";
+          } else {
+            $.ajax({
+              url: 'search', // Thay đổi đường dẫn tới view search_game của bạn
+              data: { search_term: searchTerm },
+              dataType: 'json',
+              success: function (data) {
+                if (data.search_game.length > 0) {
+                  NoResult.style.display = "none";
+
+                  $.each(data.search_game, function (index, game) {
+                    var gameLink = document.createElement('a');
+                    gameLink.href = 'games/' + game.html_name;
+                    gameLink.className = 'sc-wr3rvk-0 jRxCRx sc-963fcq-2 cOWZsC sc-1tnpzxm-5 iUisDg';
+
+                    var gameImage = document.createElement('img');
+                    gameImage.src = game.picture;
+                    gameImage.srcset = game.picture;
+                    gameImage.alt = game.name;
+                    gameImage.width = 94;
+                    gameImage.height = 94;
+                    gameImage.className = 'sc-18mcksl-1 eoBBYj';
+
+                    var gameTitle = document.createElement('span');
+                    gameTitle.className = 'sc-963fcq-0 esaxGV global-cq-title';
+                    gameTitle.textContent = game.name;
+                    gameLink.appendChild(gameImage);
+                    gameLink.appendChild(gameTitle);
+                    resultsList.append(gameLink);
+                  });
+                } else {
+                  NoResult.style.display = "block";
+                }
+              }
+            });
           }
-        });
+
+        }, 2000)
+
       });
     });
   </script>
