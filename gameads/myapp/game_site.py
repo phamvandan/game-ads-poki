@@ -19,8 +19,9 @@ def index(request, subpath):
             'name': game[0]['name'],
             'description': game[0]['description'],
             'html_name': game[0]['html_name'],
-            "recommend_game": random.sample(all_game, 8),
-            "relate_game": random.sample(all_game, 32)
+            "a": random.sample(all_game, 1)[0],
+            "b": random.sample(all_game, 1)[0],
+            "relate_game": random.sample(all_game, 55)
         }
         return HttpResponse(template.render(context))  
     else:
