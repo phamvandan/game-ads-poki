@@ -3,6 +3,7 @@ import random
 # Create your views here.
 from django.http import HttpResponse
 from django.template import loader
+from django.http import JsonResponse
 from .services import *
 import random
 import json
@@ -10,7 +11,7 @@ import json
 def index(request):
     template = loader.get_template('index.html')   
     list_game = get_listgame()
-
+    
     json_bone = """
     {{
         "id": {id},
@@ -66,8 +67,16 @@ def index(request):
         "17" : big_list[16]
     }
     return HttpResponse(template.render(context))  
-    return HttpResponse(template.render())
 
 def listgame(request):
     print(get_listgame())
     return HttpResponse(get_listgame())
+def search_game(request):
+    search_term = request.GET.get("search_term", "")
+    print(search_term)
+
+    if request.method == "GET":
+        
+        search_game = search_listgame(search_term)
+        data = list(search_game)
+        return JsonResponse({"search_game": data})
