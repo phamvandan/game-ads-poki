@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from .services import *
 import random
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request, subpath):
@@ -26,3 +27,13 @@ def index(request, subpath):
         return HttpResponse(template.render(context))  
     else:
         return HttpResponse("Error")  
+    
+def search_game(request):
+    search_term = request.GET.get("search_term", "")
+    print(search_term)
+
+    if request.method == "GET":
+        
+        search_game = search_listgame(search_term)
+        data = list(search_game)
+        return JsonResponse({"search_game": data})
