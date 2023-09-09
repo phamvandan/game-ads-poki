@@ -8,7 +8,8 @@ from django.http import JsonResponse
 # Create your views here.
 def index(request, subpath):
     list_game = get_listgame()
-
+    image_path = '/static/logo.png'
+    logo = '/static/logo.ico'
     all_game = [subset for subset in list_game]
     game = get_subpath_html_name(subpath)
     if game is not None:
@@ -22,7 +23,9 @@ def index(request, subpath):
             'html_name': game[0]['html_name'],
             "a": random.sample(all_game, 1)[0],
             "b": random.sample(all_game, 1)[0],
-            "relate_game": random.sample(all_game, 55)
+            "relate_game": random.sample(all_game, 55),
+            "image_path" : image_path,
+            "logo" : logo
         }
         return HttpResponse(template.render(context))  
     else:

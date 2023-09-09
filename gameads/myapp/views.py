@@ -11,7 +11,9 @@ import json
 def index(request):
     template = loader.get_template('index.html')   
     list_game = get_listgame()
-    
+    image_path = '/static/logo.png'
+    logo = '/static/logo.ico'
+
     json_bone = """
     {{
         "id": {id},
@@ -64,7 +66,9 @@ def index(request):
         "14" : big_list[13],
         "15" : big_list[14],
         "16" : big_list[15],
-        "17" : big_list[16]
+        "17" : big_list[16],
+        "image_path" : image_path,
+        "logo" : logo
     }
     return HttpResponse(template.render(context))  
 

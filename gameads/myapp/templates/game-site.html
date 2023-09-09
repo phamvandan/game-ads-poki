@@ -2483,11 +2483,6 @@
 		/*!sc*/
 	</style>
 
-	<link rel="preconnect" href="https://a.poki.com/" />
-	<link rel="preconnect" href="https://img.poki.com/" />
-
-	<link rel="preconnect" href="https://poki-gdn.com/" />
-	<link rel="preconnect" href="https://games.poki.com/" />
 
 
 	<!-- <link rel="manifest" href="https://poki.com/manifest.json"> -->
@@ -2505,7 +2500,7 @@
 		content="width=device-width, initial-scale=1.0, minimal-ui, shrink-to-fit=no viewport-fit=cover" />
 
 	<!-- <script src="http://a.poki.com/t2.js" async></script> -->
-	<link rel="icon" type="image/x-icon" href="https://a.poki.com/img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="{{ logo }}">
 	<link data-react-helmet="true" rel="canonical" href="https://poki.com/en/g/stickman-hook" />
 	<link data-react-helmet="true" rel="alternate" href="https://poki.com/ar/g/stickman-hook" hrefLang="ar" />
 	<link data-react-helmet="true" rel="alternate" href="https://poki.com/bg/g/stickman-hook" hrefLang="bg" />
@@ -2542,7 +2537,7 @@
 		hrefLang="vi" />
 	<link data-react-helmet="true" rel="alternate" href="https://poki.cn/g/stickman-hook" hrefLang="zh" />
 	<link data-react-helmet="true" rel="alternate" href="https://poki.com/en/g/stickman-hook" hrefLang="x-default" />
-	<title data-react-helmet="true">STICKMAN HOOK 🎮 - Play Now Online, No Downloads! | Poki</title>
+	<title data-react-helmet="true">{{title}} 🎮 - Play Now Online, No Downloads! | BeeGame</title>
 	<meta data-react-helmet="true" name="description"
 		content="Want to play Stickman Hook? Play this game online for free on Poki in fullscreen. Lots of fun to play when bored. Stickman Hook is one of our favorite skill games." />
 	<meta data-react-helmet="true" property="og:title" content="Stickman Hook" />
@@ -2762,12 +2757,11 @@
 		</style>
 		<div style="display: contents;">
 			<nav mode="pill" class="sc-15orno7-0 dDVcIC">
-				<div class="sc-11jy73d-3 bfQcDW"><a href="/" title="Poki" aria-label="Poki"
-						class="sc-woh2fi-0 evgOqe sc-11jy73d-0 gClmwW"><svg width="100%" height="100%"
-							xmlns="http://www.w3.org/2000/svg">
-							<use xlink:href="#pokiIcon"></use>
-						</svg></a></div>
-				<div class="sc-jaa1t8-0 bwKNQa"><a href="/" title="Online Games on Poki" class="sc-jaa1t8-1 GKasG"><svg
+				<div class="sc-11jy73d-3 bfQcDW"><a href="/" title="BeeGame" aria-label="BeeGame"
+						class="sc-woh2fi-0 evgOqe sc-11jy73d-0 gClmwW" style="display: flex;justify-content: center;">
+						<img src="{{ image_path }}">
+					</a></div>
+				<div class="sc-jaa1t8-0 bwKNQa"><a href="/" title="Online Games on BeeGame" class="sc-jaa1t8-1 GKasG"><svg
 							xmlns="http://www.w3.org/2000/svg" class="sc-jaa1t8-2 dpuANl">
 							<use xlink:href="#homeIcon"></use>
 						</svg></a><button id="OpenButton" class="sc-c36zwn-0 sc-jaa1t8-3 koyGQc fjlzah">What are you
@@ -3255,8 +3249,7 @@
 				<div class="sc-1v3c8lr-1 jWItob">
 					<nav class="sc-1oa7ili-0 gmEuRM">
 						<ul>
-							<li><a href="https://poki.com/">games</a></li>
-							<li><a href="https://poki.com/en/skill">Skill Games</a></li>
+							<li><a href="/">games</a></li>
 						</ul>
 					</nav>
 					<header class="sc-1v3c8lr-2 kGpygg">
@@ -3286,135 +3279,36 @@
 			<footer class="sc-etrfs6-0 eumHXV">
 				<div class="sc-etrfs6-1 ieExfn">
 					<div class="sc-etrfs6-5 eZGfsT">
-						<div class="sc-etrfs6-4 bceTvN"><a href="https://about.poki.com/" rel="noopener" target="_blank"
-								aria-label="Poki" class="sc-woh2fi-0 evgOqe"><svg width="100%" height="100%"
-									xmlns="http://www.w3.org/2000/svg">
-									<use xlink:href="#pokiIcon"></use>
-								</svg></a></div><span class="sc-etrfs6-6 laQeeF">Let the world play</span>
+						<div class="sc-etrfs6-4 bceTvN"><a href="#" rel="noopener" target="_blank"
+								aria-label="Poki" class="sc-woh2fi-0 evgOqe">            <img src="{{ image_path }}" style="
+								width: 100%;
+								margin-top: -20px;
+							"> 
+							</a></div><span class="sc-etrfs6-6 laQeeF">Let the world play</span>
 					</div>
-					<div class="sc-etrfs6-3 fPulDP"><a href="https://about.poki.com/" rel="noopener nofollow"
-							target="_blank" class="sc-etrfs6-2 bqYlou">About</a><a href="https://developers.poki.com/"
+					<div class="sc-etrfs6-3 fPulDP"><a href="#" rel="noopener nofollow"
+							target="_blank" class="sc-etrfs6-2 bqYlou">About</a><a href="#"
 							rel="noopener nofollow" target="_blank" class="sc-etrfs6-2 bqYlou">Developers</a><a
-							href="https://jobs.poki.com/" rel="noopener nofollow" target="_blank"
-							class="sc-etrfs6-2 bqYlou">Jobs</a><a href="https://kids.poki.com/" rel="noopener nofollow"
-							target="_blank" class="sc-etrfs6-2 bqYlou">Poki Kids</a><a
-							href="https://poki.com/en/c/global-privacy-statement" rel="noopener nofollow"
+							href="#" rel="noopener nofollow" target="_blank"
+							class="sc-etrfs6-2 bqYlou">Jobs</a><a href="#" rel="noopener nofollow"
+							target="_blank" class="sc-etrfs6-2 bqYlou">BeeGame Kids</a><a
+							href="#" rel="noopener nofollow"
 							target="_blank" class="sc-etrfs6-2 bqYlou">Privacy Statement</a><a
-							href="https://poki.com/en/c/global-cookie-statement" rel="noopener nofollow" target="_blank"
+							href="#" rel="noopener nofollow" target="_blank"
 							class="sc-etrfs6-2 bqYlou">Cookie Statement</a><a
-							href="https://poki.com/en/c/global-terms-of-use" rel="noopener nofollow" target="_blank"
-							class="sc-etrfs6-2 bqYlou">Terms of Use</a><a href="https://poki.com/en/c/faq"
-							class="sc-etrfs6-2 bqYlou">FAQ</a><a href="https://poki.com/en/c/contact"
+							href="#" rel="noopener nofollow" target="_blank"
+							class="sc-etrfs6-2 bqYlou">Terms of Use</a><a href="#"
+							class="sc-etrfs6-2 bqYlou">FAQ</a><a href="#"
 							class="sc-etrfs6-2 bqYlou">Contact</a></div>
 					<div class="sc-etrfs6-7 fnarXt">
 						<div class="sc-1mfuhwp-4 fLrkIY"><button aria-label="Choose language"
 								class="sc-1mfuhwp-0 hTodpw">
 								<div></div>
 							</button>
-							<div class="sc-1mfuhwp-3 jsEXsG"><a href="https://poki.co.id/g/stickman-hook"
-									title="Stickman Hook" class="sc-1mfuhwp-2 fHEEcD"><span
-										style="background-position: -202px -42px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Bahasa Indonesia</a><a
-									href="https://poki.com/cz/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -2px -42px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Čeština</a><a
-									href="https://poki.com/dk/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -42px -42px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Dansk</a><a
-									href="https://poki.at/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -82px -2px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Deutsch (AT)</a><a
-									href="https://poki.ch/spiel/stickman-hook.html" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -82px -42px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Deutsch (CH)</a><a
-									href="https://poki.de/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -2px -82px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Deutsch (DE)</a><a
-									href="https://poki.com/en/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -82px -82px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>English</a><a
-									href="https://poki.com/es/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -2px -162px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Español</a><a
-									href="https://poki.com/fr/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -2px -2px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Français</a><a
-									href="https://poki.com/il/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -202px -2px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Hebrew</a><a
-									href="https://poki.com/it/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -202px -82px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Italiano</a><a
-									href="https://poki.com/hu/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -162px -162px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Magyar</a><a
-									href="https://poki.com/nl/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -42px -202px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Nederlands</a><a
-									href="https://poki.com/no/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -82px -202px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Norsk</a><a
-									href="https://poki.com/pl/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -122px -202px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Polskie</a><a
-									href="https://poki.com.br/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -162px -202px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Português (BR)</a><a
-									href="https://poki.pt/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -242px -2px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Português (PT)</a><a
-									href="https://poki.com/ro/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -202px -202px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Română</a><a
-									href="https://poki.com/sk/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -242px -162px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Slovak</a><a
-									href="https://poki.com/fi/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -42px -162px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Suomalainen</a><a
-									href="https://poki.com/se/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -242px -202px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Svenska</a><a
-									href="https://www.trochoi.net/trò+chơi/stickman-hook.html" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -82px -242px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Tiếng Việt</a><a
-									href="https://poki.com/tr/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -42px -242px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Türkçe</a><a
-									href="https://poki.com/gr/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -42px -82px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>Ελληνικά</a><a
-									href="https://poki.com/bg/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -122px -162px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>български</a><a
-									href="https://poki.by/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -242px -42px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>русский (BY)</a><a
-									href="https://poki.com/ru/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -242px -122px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>русский (RU)</a><a
-									href="https://poki.com/ua/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -242px -82px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>русский (UA)</a><a
-									href="https://poki.com/ar/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -42px -2px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>عربي</a><a
-									href="https://poki.com/th/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -2px -242px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>ภาษาไทย</a><a
-									href="https://poki.com/kr/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -202px -162px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>한국어</a><a
-									href="https://poki.com/jp/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -202px -122px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>日本語</a><a
-									href="https://poki.cn/g/stickman-hook" title="Stickman Hook"
-									class="sc-1mfuhwp-2 fHEEcD"><span style="background-position: -122px -242px;"
-										class="sc-1acscpn-0 eCKYgI sc-1mfuhwp-1 bAmNtY"></span>简体中文</a></div>
-						</div>
+							
 					</div>
 				</div>
-				<div class="sc-etrfs6-8 cGMxXn">Poki v3.117.0 - SDK v2</div>
+				<div class="sc-etrfs6-8 cGMxXn">BeeGame v3.117.0 - SDK v2</div>
 			</footer>
 		</div>
 		<div style="display: contents;"></div>
