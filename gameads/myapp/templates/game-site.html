@@ -770,7 +770,13 @@
 		}
 
 		/*!sc*/
-		@media (min-width:111px) and (max-width:990.9px) {
+		@media (min-width:111px) and (max-width:400px) {
+			.dtBprl {
+				--root-content-width: auto;
+			}
+		}
+
+		@media (min-width:400px) and (max-width:990.9px) {
 			.dtBprl {
 				--root-content-width: 760px;
 			}
@@ -871,8 +877,16 @@
 			transform: translate(var(--offset), 0);
 		}
 
+		@media (min-width: 111px) and (max-width: 400px) {
+			.dDVcIC {
+				--offset: 0;
+				--left: 30px;
+				top: 285px;
+			}
+		}
+
 		/*!sc*/
-		@media (min-width:111px) and (max-width:770.9px) {
+		@media (min-width:400px) and (max-width:770.9px) {
 			.dDVcIC {
 				--offset: 0;
 				--left: 3px;
@@ -1433,6 +1447,15 @@
 		/*!sc*/
 		.eDhvMX {
 			background: rgba(255, 255, 255, .5);
+			height: 90px;
+			width: 728px;
+		}
+
+		@media (max-width:400px) {
+			.eDhvMX {
+				height: 90px;
+				width: 400px;
+			}
 		}
 
 		/*!sc*/
@@ -1576,8 +1599,24 @@
 			}
 		}
 
+		@media (max-width:400px) {
+			.gpagqS {
+				--gridTemplateColumns: 3;
+				grid-template-areas:
+					'igc igc igc'
+					'igc igc igc'
+					'ir0 ir0 ir0'
+					'ir1 ir1 ir1'
+					'a79 a79 a79';
+			}
+
+			.gpagqS .sc-al88rd-9 {
+				display: none;
+			}
+		}
+
 		/*!sc*/
-		@media (min-width:111px) and (max-width:990.9px) {
+		@media (min-width:400px) and (max-width:990.9px) {
 			.gpagqS {
 				--gridTemplateColumns: 7;
 				grid-template-areas: '... igc igc igc igc igc igc' '... igc igc igc igc igc igc' '... igc igc igc igc igc igc' '... igc igc igc igc igc igc' 'a79 a79 a79 a79 a79 a79 a79';
@@ -1771,7 +1810,14 @@
 		}
 
 		/*!sc*/
-		@media (min-width:111px) and (max-width:1210.9px) {
+		@media (min-width:111px) and (max-width:400px) {
+			.bpRqPb {
+				width: 315px;
+				height: 253px;
+			}
+		}
+
+		@media (min-width:400px) and (max-width:1210.9px) {
 			.bpRqPb {
 				width: 640px;
 				height: 424px;
@@ -3032,7 +3078,7 @@
 											allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share"
 											name="gameFrame" scrolling="no"
 											sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads"
-											src="../static/html5/index.html" title="{{title}}" class="sc-1bxux5k-0 iIEDab"></iframe>
+											src="{{source}}" title="{{title}}" class="sc-1bxux5k-0 iIEDab"></iframe>
 									</div>
 								</div>
 								<div class="sc-1thi3bz-0 iQlMNh">
@@ -3225,9 +3271,9 @@
 							Games</span></a></div>
 				<div class="sc-tbf0fc-0 gqnFJQ sc-al88rd-7 pAock">
 					<div width="728" height="90" class="sc-tbf0fc-1 bioerJ">
-						<div style="height: 90px; width: 728px; overflow: hidden;" class="sc-tbf0fc-3 eDhvMX">
+						<div style="overflow: hidden;" class="sc-tbf0fc-3 eDhvMX">
 							<div id="/21682198607/desktop_gp_728x90/3_desktop_gp_728x90"
-								style="height: 90px; width: 728px; overflow: hidden;"></div>
+								style="height: 90px; width: 100%; overflow: hidden;"></div>
 						</div>
 						<div width="728" height="90" class="sc-tbf0fc-2 keJcxs">Advertisement</div>
 					</div>
